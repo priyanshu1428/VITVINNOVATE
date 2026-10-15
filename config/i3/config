@@ -1,0 +1,32 @@
+# i3wm Configuration File
+set $mod Mod4
+
+# Appearance / Theme (Catppuccin Macchiato)
+client.focused          #b4befe #1e1e2e #cdd6f4 #b4befe #b4befe
+client.unfocused        #313244 #1e1e2e #a6adc8 #313244 #313244
+
+# Launchers and Terminals
+bindsym $mod+Return exec alacritty
+bindsym $mod+d exec rofi -show drun
+
+# Screenshots
+bindsym Print exec maim -s ~/Pictures/screenshot-$(date +%s).png
+
+# Window Management
+bindsym $mod+Shift+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Workspaces
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+
+# Autostart
+exec_always --no-startup-id polybar main

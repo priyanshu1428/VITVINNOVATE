@@ -1,0 +1,21 @@
+[bar/main]
+width = 100%
+height = 28pt
+background = #1E1E2E
+foreground = #CDD6F4
+
+font-0 = "JetBrainsMono Nerd Font:size=10;2"
+
+modules-left = i3
+modules-center = sysinfo
+modules-right = date
+
+[module/sysinfo]
+type = custom/script
+exec = ~/.config/sys_info.sh
+interval = 2
+
+[module/date]
+type = internal/date
+interval = 1
+date = %Y-%m-%d %H:%M:%S
